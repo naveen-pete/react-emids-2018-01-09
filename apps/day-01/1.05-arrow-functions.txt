@@ -1,0 +1,15 @@
+* Arrow functions
+-----------------
+
+// this demo
+let team = {
+	players: [ 'Virat', 'Sachin', 'Dhoni' ],
+  	country: 'India',
+    display: function() {
+      this.players.forEach(player => {
+      	console.log(`${player} plays for ${this.country}`);
+      });
+    }
+};
+
+team.display();

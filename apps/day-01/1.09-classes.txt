@@ -1,0 +1,36 @@
+* Classes and Inheritance
+-------------------------
+class Car {
+  constructor(name) {
+    this.name = name;
+  }
+  
+  drive() {
+  	console.log('drive() called');
+  }
+}
+
+class Suzuki extends Car {
+	constructor(name, color) {
+    super(name);
+    this.color = color;
+  }
+  
+  honk() {
+  	console.log('honk() called');
+  }
+}
+
+let car = new Car('Alto');
+car.drive();
+
+console.log(car);
+
+let s = new Suzuki('Alto', 'red');
+s.honk();
+s.drive();
+
+console.log(s);
+
+console.log(typeof Car);
+console.log(typeof Suzuki);

@@ -1,0 +1,242 @@
+ES6 Introduction
+----------------
+* ES - Short form of ECMAScript
+- Standard, description of a scripting language
+- JavaScript is the implementation, something that runs on the browser
+- ES6 is the new version of JavaScript
+
+Array Helper Methods
+--------------------
+* forEach()
+-----------
+- Less code
+
+- Real world example
+emails.forEach(function(email) {
+  deleteEmail(email);
+});
+
+- Refactor the code below to instead use the forEach helper
+function handlePosts() {
+    var posts = [
+      { id: 23, title: 'Daily JS News' },
+      { id: 52, title: 'Code Refactor City' },
+      { id: 105, title: 'The Brightest Ruby' }
+    ];
+    
+    for (var i = 0; i < posts.length; i++) {
+      savePost(posts[i]);
+    }
+}
+
+- Using the forEach helper, calculate the area of each image and store it in a new array called 'areas'.
+var images = [
+  { height: 10, width: 30 },
+  { height: 20, width: 90 },
+  { height: 54, width: 32 }
+];
+var areas = [];
+
+* map()
+-------
+- Plucking values
+
+Using map, create a new array that contains the 'height' property of each object.  Assign this new array to the variable 'heights'.
+var images = [
+  { height: '34px', width: '39px' },
+  { height: '54px', width: '19px' },
+  { height: '83px', width: '75px' },
+];
+
+var heights;
+
+// Using map, create a new array that contains the distance / time value from each trip.
+var trips = [
+  { distance: 34, time: 10 },
+  { distance: 90, time: 50 },
+  { distance: 59, time: 25 }
+];
+
+var speeds;
+
+* filter()
+----------
+Filter the array of numbers using the filter helper, creating a new array that only contains numbers greater than 50.  Assign this new array to a variable called 'filteredNumbers'.  
+var numbers = [15, 25, 35, 45, 55, 65, 75, 85, 95];
+
+var filteredNumbers;
+
+Using filter, create a new array that contains products whose quantity is greater than 0 and price less than 100
+var products = [
+	{ name: 'Potato', type: 'vegetable', quantity: 0, price: 25 },
+	{ name: 'Apple', type: 'fruit', quantity: 0, price: 150 },
+	{ name: 'Onion', type: 'vegetable', quantity: 2, price: 40 },
+	{ name: 'Carrot', type: 'vegetable', quantity: 1, price: 60 },
+	{ name: 'Banana', type: 'fruit', quantity: 2, price: 50  }
+];
+
+var filteredProducts;
+
+Filter the array of users, only returning users who have admin level access.  Assign the result to the variable 'filteredUsers'.
+var users = [
+ { id: 1, admin: true },  
+ { id: 2, admin: false },
+ { id: 3, admin: false },
+ { id: 4, admin: false },
+ { id: 5, admin: true },
+];
+
+var filteredUsers;
+
+* find()
+--------
+
+var comment = { id: 100, text: 'Nice post!', postId: 102 };
+
+var posts = [
+	{ id: 101, title: 'Post 1' },
+	{ id: 102, title: 'Post 2' },
+	{ id: 103, title: 'Post 3' }
+];
+
+function getPostForComment(posts, comment) {
+	// find the post for the comment, return the same
+}
+
+* every()
+---------
+
+Given an array of users, return 'true' if every user has submitted a request form.  Assign the result to the variable 'hasSubmitted'.
+var users = [
+  { id: 21, hasSubmitted: true },
+  { id: 62, hasSubmitted: false },
+  { id: 4, hasSubmitted: true }
+];
+
+var hasSubmitted;
+
+* some()
+--------
+
+Given an array of network objects representing network requests, assign the boolean 'true' to the variable 'inProgress' if any network request has a 'status' of 'pending'.
+var requests = [
+  { url: '/photos', status: 'complete' },
+  { url: '/albums', status: 'pending' },
+  { url: '/users', status: 'failed' }
+];
+
+var inProgress;
+
+* reduce()
+----------
+
+// Use the 'reduce' helper to create an object that tallies the number of sitting and standing desks.  The object returned should have the form '{ sitting: 3, standing: 2 }'. 
+var desks = [
+  { type: 'sitting' },
+  { type: 'standing' },
+  { type: 'sitting' },
+  { type: 'sitting' },
+  { type: 'standing' }
+];
+
+var deskTypes;
+
+* map() & filter()
+------------------
+/* Using .map()
+ *
+ * Using the musicData array and .map():
+ *   - return a string for each item in the array in the following format
+ *     <album-name> by <artist> sold <sales> copies
+ *   - store the returned data in a new albumSalesStrings variable
+ *
+ * Note:
+ *   - do not delete the musicData variable
+ *   - do not alter any of the musicData content
+ *   - do not format the sales number, leave it as a long string of digits
+ */
+
+const musicData = [
+    { artist: 'Adele', name: '25', sales: 1731000 },
+    { artist: 'Drake', name: 'Views', sales: 1608000 },
+    { artist: 'Beyonce', name: 'Lemonade', sales: 1554000 },
+    { artist: 'Chris Stapleton', name: 'Traveller', sales: 1085000 },
+    { artist: 'Pentatonix', name: 'A Pentatonix Christmas', sales: 904000 },
+    { artist: 'Original Broadway Cast Recording', 
+      name: 'Hamilton: An American Musical', sales: 820000 },
+    { artist: 'Twenty One Pilots', name: 'Blurryface', sales: 738000 },
+    { artist: 'Prince', name: 'The Very Best of Prince', sales: 668000 },
+    { artist: 'Rihanna', name: 'Anti', sales: 603000 },
+    { artist: 'Justin Bieber', name: 'Purpose', sales: 554000 }
+];
+
+const albumSalesStrings = musicData.map(album => `${album.name} by ${album.artist} sold ${album.sales} copies`);
+
+console.log(albumSalesStrings);
+
+------------------
+/* Using .filter()
+ *
+ * Using the musicData array and .filter():
+ *   - return only album objects where the album's name is
+ *     10 characters long, 25 characters long, or anywhere in between
+ *   - store the returned data in a new info variable
+ *
+ * Note:
+ *   - do not delete the musicData variable
+ *   - do not alter any of the musicData content
+ */
+
+const musicData = [
+    { artist: 'Adele', name: '25', sales: 1731000 },
+    { artist: 'Drake', name: 'Views', sales: 1608000 },
+    { artist: 'Beyonce', name: 'Lemonade', sales: 1554000 },
+    { artist: 'Chris Stapleton', name: 'Traveller', sales: 1085000 },
+    { artist: 'Pentatonix', name: 'A Pentatonix Christmas', sales: 904000 },
+    { artist: 'Original Broadway Cast Recording', 
+      name: 'Hamilton: An American Musical', sales: 820000 },
+    { artist: 'Twenty One Pilots', name: 'Blurryface', sales: 738000 },
+    { artist: 'Prince', name: 'The Very Best of Prince', sales: 668000 },
+    { artist: 'Rihanna', name: 'Anti', sales: 603000 },
+    { artist: 'Justin Bieber', name: 'Purpose', sales: 554000 }
+];
+
+const results = musicData.filter(album => album.name.length >= 10 && album.name.length <= 25);
+
+console.log(results);
+
+------------------
+/* Combining .filter() and .map()
+ *
+ * Using the musicData array, .filter, and .map():
+ *   - filter the musicData array down to just the albums that have 
+ *     sold over 1,000,000 copies
+ *   - on the array returned from .filter(), call .map()
+ *   - use .map() to return a string for each item in the array in the
+ *     following format: "<artist> is a great performer"
+ *   - store the array returned form .map() in a new "popular" variable
+ *
+ * Note:
+ *   - do not delete the musicData variable
+ *   - do not alter any of the musicData content
+ */
+
+const musicData = [
+    { artist: 'Adele', name: '25', sales: 1731000 },
+    { artist: 'Drake', name: 'Views', sales: 1608000 },
+    { artist: 'Beyonce', name: 'Lemonade', sales: 1554000 },
+    { artist: 'Chris Stapleton', name: 'Traveller', sales: 1085000 },
+    { artist: 'Pentatonix', name: 'A Pentatonix Christmas', sales: 904000 },
+    { artist: 'Original Broadway Cast Recording', 
+      name: 'Hamilton: An American Musical', sales: 820000 },
+    { artist: 'Twenty One Pilots', name: 'Blurryface', sales: 738000 },
+    { artist: 'Prince', name: 'The Very Best of Prince', sales: 668000 },
+    { artist: 'Rihanna', name: 'Anti', sales: 603000 },
+    { artist: 'Justin Bieber', name: 'Purpose', sales: 554000 }
+];
+
+const popular = musicData
+    .filter(album => album.sales > 1000000)
+    .map(album => `${album.artist} is a great performer`);
+
+console.log(popular);

@@ -1,0 +1,45 @@
+* Promises & Fetch
+-------------------
+function doTasks() {
+	let p = getCustomers();
+  //let p = getCustomersWithFetch();
+  console.log(p);
+
+  p.then(customers => {
+        console.log('then()');
+        console.log('SUCCESS:', customers);
+		})
+    .catch(errorMessage => {
+        console.log('catch()');
+        console.log('FAILED:', errorMessage);
+    });
+  
+  console.log('perform next task');
+}
+
+// Simulates a delay of 3 seconds
+function getCustomers() {
+  console.log('get customers started');
+  
+  const p = new Promise((resolve, reject) => {
+  	// access server
+    // receive customer list
+    setTimeout(() => {    
+      let customers = ['hari', 'krish'];
+      resolve(customers);
+      //reject('something is wrong, task could not be completed');
+    }, 3000);
+  });
+  
+  return p;
+}
+
+// Actual server communication with fetch()
+function getCustomersWithFetch() {
+  console.log('get customers (fetch) started');
+  
+  let url = 'https://jsonplaceholder.typicode.com/users';
+  return fetch(url).then(response => response.json());
+}
+
+doTasks();

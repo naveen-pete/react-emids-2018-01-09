@@ -1,0 +1,34 @@
+Default Function Arguments
+--------------------------
+
+Refactor the following code to use default function arguments.  Be sure to remove any unused code after you refactor it.
+function sum(a, b) {
+  if (a === undefined) {
+    a = 0; 
+  }
+  
+  if (b === undefined) {
+    b = 0; 
+  }
+  
+  return a + b;
+}
+
+function addNumbers(a = 15, b = 25) {
+  // if(!a) a = 10;
+  // if(!b) b = 20;
+	return a + b;
+}
+
+console.log('sum:', addNumbers(1, 2));
+console.log('sum:', addNumbers(1));
+console.log('sum:', addNumbers());
+
+
+// Assign 'GET' as the default HTTP method
+function makeAjaxRequest(url, method = 'GET') {
+   // Send request to server 
+}
+
+makeAjaxRequest('http://some-server.com');
+makeAjaxRequest('http://some-server.com', 'POST');

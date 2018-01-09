@@ -1,0 +1,145 @@
+https://stephengrider.github.io/JSPlaygrounds/
+http://babeljs.io/repl
+
+forEach()
+---------
+* Display every element in an array
+* Find sum of numbers in an array
+* Delete selected e-mails
+
+map()
+---------
+* Double numbers in an array
+* Calculate area of a rectangle [{ l: 10, w: 20 }, { l: 15, w: 25 }]
+* Pluck name from an array of user objects
+  [{ id: 1, name: '', dept: '' }, { id: 2, name: '', dept: '' }]
+* Transform an array of product objects to return an array of HTML rows
+
+filter()
+---------
+* Filter grocery items on type, qty, price
+  [{ name: '', type: '', qty: 0, price: 0 }]
+* Filter comments for a movie based on movie id
+  movies = [{ id: 1, name: 'abc'}, { id: 2, name: 'xyz'}];
+  comments = [
+    { id: 1, comment: 'm1-c1', movieId: 1 }, 
+    { id: 2, comment: 'm2-c1', movieId: 2 },
+    { id: 3, comment: 'm1-c2', movieId: 1 }
+  ]
+* Filter users based on isAdmin flag
+    users = [
+      { id: 1, name: 'user1', isAdmin: true },
+      { id: 2, name: 'user2', isAdmin: false },
+      { id: 3, name: 'user3', isAdmin: true },
+    ];
+
+find()
+---------
+* Find an user based on name
+    users = [
+      { id: 1, name: 'user1', isAdmin: true },
+      { id: 2, name: 'user2', isAdmin: false }
+    ];
+* Find a post from a list of posts to display post details
+
+every()
+---------
+* Check if all the fields in a form are valid
+* Check if all the students in a class have submitted assignments
+
+some()
+---------
+* Check if any project task is pending in a list of tasks
+
+reduce()
+---------
+* Find sum of an array of numbers
+* Get an array of values from an array of objects
+
+const and let
+--------------
+* Makes the code more legible
+* Use const when you expect the value of the variable does not change in future
+* Use let when you expect the value of the variable changes in future
+
+Template Strings
+-----------------
+* Display customer object
+  { name: 'Hari', city: 'Bengaluru', email: 'hari@xyz.com', phone: '9876501234' }
+
+Arrow functions
+-----------------
+* Square a number
+* Display team members
+
+let team = {
+	players: [ 'Virat', 'Sachin', 'Dhoni' ],
+  	country: 'India',
+    display: function() {
+      this.players.forEach(function(player) {
+      	console.log(`${player} plays for ${this.country}`);
+      });
+    }
+};
+
+team.display();
+
+Enhanced Object Literals
+-------------------------
+* Simplify
+
+const make = 'Brezza';
+const color = 'Blue';
+
+const car = {
+  make: make,
+  color: color,
+  
+  drive: function() {
+    return 'Vroom!';
+  },
+  
+  getColor: function() {
+    return this.color;
+  },
+  
+  getMake: function() {
+    return this.make;
+  }
+};
+
+car.drive();
+car.getColor();
+car.getMake();
+
+Default Function Arguments
+---------------------------
+* Compute bill amount
+
+function calculateBill(amount, taxPercent, tipPercent) {
+  const tax = amount * taxPercent;
+  const tip = amount * tipPercent;
+  return {
+  	amount,
+    tax,
+    tip,
+    total: amount + tax + tip
+  };
+}
+
+calculateBill(100);
+calculateBill(100, 0.1);
+calculateBill(100, 0.1, 0.05);
+
+Rest & Spread
+--------------
+
+Destructuring
+--------------
+
+Classes
+--------
+
+Generators
+-----------
+

@@ -1,0 +1,25 @@
+Rest and Spread operators
+-------------------------
+
+Rest Operator
+-------------
+function addNumbers(numbers) {
+	return numbers.reduce((sum, number) => sum + number, 0);
+}
+
+addNumbers([1, 2, 3]);
+
+function addNumbers(...numbers) {
+  console.log(numbers);
+	return numbers.reduce((sum, n) => sum + n, 0);
+}
+
+console.log('sum = ', addNumbers(100, 200, 300, 400));
+
+
+Spread Operator
+---------------
+defaultColors = ['red', 'green', 'blue'];
+favoriteColors = ['brown', 'yellow'];
+
+paletteColors = [...defaultColors, ...favoriteColors];

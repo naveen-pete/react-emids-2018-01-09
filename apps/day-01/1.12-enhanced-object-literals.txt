@@ -1,0 +1,116 @@
+Enhanced Object Literals
+------------------------
+Refactor to use enhanced literal notation
+
+const color = 'red';
+
+const Car = {
+  color: color,
+  drive: function() {
+    return 'Vroom!';
+  },
+  getColor: function() {
+    return this.color;
+  }
+};
+
+--------------------
+function CreateProductStore(inventory) {
+   return {
+      inventory: inventory,
+      inventoryValue: function() {
+         return this.inventory.reduce(
+            (total, product) => total + product.price, 0);
+      },
+      getPrice: function(productId) {
+         return this.inventory.find(
+            product => product.id === productId).price;
+      }
+   };
+}
+
+const inventory = [
+  { id: 1, name: 'Bahubali DVD', price: 500 },
+  { id: 2, name: 'Timex watch', price: 1000 },
+  { id: 3, name: 'Samsung Mobile', price: 12500}
+];
+
+const myProductStore = CreateProductStore(inventory);
+
+console.log('total value', myProductStore.inventoryValue());
+console.log('price of one product', myProductStore.getPrice(2));
+
+
+// Improved code
+function CreateProductStore(inventory) {
+   return {
+      inventory,
+      inventoryValue() {
+         return this.inventory.reduce(
+            (total, product) => total + product.price, 0);
+      },
+      getPrice(productId) {
+         return this.inventory.find(
+            product => product.id === productId).price;
+      }
+   };
+}
+
+const inventory = [
+  { id: 1, name: 'Bahubali DVD', price: 500 },
+  { id: 2, name: 'Timex watch', price: 1000 },
+  { id: 3, name: 'Samsung Mobile', price: 12500}
+];
+
+const myProductStore = CreateProductStore(inventory);
+
+console.log('total value', myProductStore.inventoryValue());
+console.log('price of one product', myProductStore.getPrice(2));
+
+--------------------
+let customer = { name: 'naveen', city: 'blore' };
+let url = 'http://mycustomers.com';
+
+function saveCustomer(options) {
+	// save customer details on the server
+    console.log(options.customer.name + ' saved successfully at ' + url);
+}
+
+saveCustomer( { customer, url } )
+
+--------------------
+// Transform
+// From
+const people = [
+  [ 'Hari', 25 ],
+  [ 'Krish', 27 ],
+  [ 'Shiv', 24 ]
+];
+
+// To
+// [
+//   { name: 'Hari', age: 25 },
+//   { name: 'Krish', age: 27 },
+//   { name: 'Shiv', age: 24 }
+// ];
+
+// using map() and arrow function
+var peopleObjects = people.map((x) => {
+  return {
+    name: x[0],
+    age: x[1]
+  }; 
+});
+console.log('v1', peopleObjects);
+
+// improved arrow syntax
+peopleObjects = people.map(x => ({name: x[0], age: x[1]}));
+console.log('v2', peopleObjects);
+
+// improved by using destructuring
+peopleObjects = people.map(([name, age])=> ({name: name, age: age}));
+console.log('v3', peopleObjects);
+
+// improved by using enhanced object literals
+peopleObjects = people.map(([name, age])=> ({name, age}));
+console.log('v4', peopleObjects);

@@ -1,0 +1,85 @@
+* Destructuring
+---------------
+
+* Objects
+---------
+const customer = {
+  name: 'Hari',
+  email: 'hari@abc.com',
+  phone: '+91-9880198801'
+};
+
+const name = customer.name;
+const phone = customer.phone;
+
+function displayCustomer(customer) {
+  return `Dear ${customer.name}, details have been sent to your email ${customer.email}`;
+}
+
+* Arrays
+--------
+
+* Arrays and Objects
+--------------------
+const companies = [
+  { name: 'Infy', location: 'Bengaluru' },
+  { name: 'TCS', location: 'Delhi' },
+  { name: 'CTS', location: 'Chennai' }
+];
+
+location;
+
+------------------------------------------------
+const infy = {
+	locations: [ 'Bengaluru', 'Mysuru', 'Pune' ]
+};
+
+blr;
+
+------------------------------------------------
+const people = [
+	[ 'Hari', 25 ],
+  [ 'Krish', 27 ],
+  [ 'Shiv', 24 ]
+];
+
+people.map(([name, age]) => ({ name, age }));
+
+------------------------------------------------
+const people = [
+  { name: 'Hari', age: 25 },
+  { name: 'Krish', age: 27 },
+  { name: 'Shiv', age: 24 }
+]
+
+people.map( ( {name, age} ) => [ name, age ] );
+
+
+const companies = [ 
+  { name: 'Google', location: 'USA' }, 
+  { name: 'Facebook', location: 'UK'}, 
+  { name: 'Infosys', location: 'India' } 
+];
+
+// let c1, c2, c3, rest;
+
+// [ c1, c2, ...rest ] = companies;
+
+// console.log('c1 = ', c1, ' c2 = ', c2);
+// console.log('rest = ', rest);
+
+// const c = {
+// 	  name: 'Infosys',
+//   	location: 'Bengaluru',
+//    employees: 100000
+// }
+
+// let { name, location } = c;
+
+// console.log(name);
+// console.log(location);
+
+let [ { location }, { name }] = companies;
+
+console.log(location);
+console.log(name);

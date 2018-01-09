@@ -1,0 +1,15 @@
+promise = new Promise((resolve, reject) => {
+  // long running operation code
+  // long running operation code
+  // long running operation code
+
+  resolve(); // if the task is completed successfully
+  // reject(); // if the task resulted in failure
+});
+
+console.log(promise);
+
+promise
+  .then(() => console.log('successfully finished!'))
+  .then(() => console.log('another success.'))
+  .catch(() => console.log('something went wrong.'));

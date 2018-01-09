@@ -1,0 +1,43 @@
+function* myTasks() {
+  const fn = 'myTasks()';
+  console.log(`${fn} started from home.`);
+
+  // task 1: Purchase grocery items
+  console.log(`${fn} walking towards grocery store.`);
+  console.log(`${fn} entering grocery store.`);
+  const task1Result = yield 'cash';
+  console.log(`${fn}    task1Result = ${task1Result}`);
+  console.log(`${fn} out of grocery store.`);
+
+  // task 2: Collect ironed clothes from laundry
+  console.log(`${fn} walking towards laundry.`);
+  console.log(`${fn} entering laundry.`);
+  const task2Result = yield 'laundry-token';
+  console.log(`${fn}    task2Result = ${task2Result}`);
+  console.log(`${fn} out of laundry.`);
+
+  // return home
+  console.log(`${fn} walking towards home.`);
+  console.log(`${fn} reached home.`);
+
+  return [task1Result, task2Result];
+}
+
+const fn = 'main()';
+
+const gen = myTasks();
+console.log(`${fn} gen:`, gen);
+
+let result;
+result = gen.next();
+console.log(`${fn} result:`, result);
+console.log(`${fn} entered grocery store.`);
+console.log(`${fn} purchased grocery.`);
+
+result = gen.next('grocery items');
+console.log(`${fn} result:`, result);
+console.log(`${fn} entered laundry.`);
+console.log(`${fn} collected ironed clothes.`);
+
+result = gen.next('ironed clothes');
+console.log(`${fn} result:`, result);
