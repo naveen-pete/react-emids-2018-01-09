@@ -3,9 +3,12 @@ http://babeljs.io/repl
 
 forEach()
 ---------
-* Display every element in an array
-* Find sum of numbers in an array
+* Display every element in an array 
+* Find sum of numbers in an array 
 * Delete selected e-mails
+
+var names = ['hari', 'krish', 'shiv']
+var numbers = [1, 2, 3, 4, 5]
 
 map()
 ---------
