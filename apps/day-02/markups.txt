@@ -1,0 +1,355 @@
+Blog App
+---------
+
+Dependencies
+-------------
+* Bootstrap - npm install bootstrap --save
+* Font Awesome - npm install font-awesome --save
+* React Font Awesome - npm install react-fontawesome --save
+
+--------------------------------------------------------------------
+// app
+<div>
+  <!-- header -->
+  <div className="container">
+    <!-- posts index -->
+  </div>
+</div>
+
+--------------------------------------------------------------------
+// header
+    <nav className="navbar navbar-default navbar-fixed-top">
+      <div className="container-fluid">
+        <a className="navbar-brand">
+          <FontAwesome name="book" /> Blog App
+        </a>
+        <p className="navbar-text">(by <!-- your name -->)</p>
+      </div>
+    </nav>
+
+--------------------------------------------------------------------
+// post-index
+    <div className="row">
+      <!-- categories -->
+      <!-- post list -->
+    </div>
+
+--------------------------------------------------------------------
+// categories
+      <div className="col-sm-3">
+        <h4>
+          <FontAwesome name="object-group" /> Category
+        </h4>
+        <ul className="list-group">
+            <li className="list-group-item">
+              <!-- category name -->
+            </li>
+        </ul>
+      </div>
+
+--------------------------------------------------------------------
+// post-list
+      <div className="col-sm-9">
+        <div className="pull-right">
+          <a className="btn btn-sm btn-primary">
+            <span className="glyphicon glyphicon-plus" /> New Post
+          </a>
+        </div>
+        <h4>
+          <FontAwesome name="envelope" /> Posts (Category: <!-- category -->)
+        </h4>
+        <!-- list of posts -->
+      </div>
+
+--------------------------------------------------------------------
+// post-list-item
+    <div className="panel panel-info">
+      <div className="panel-heading">
+        <FontAwesome name="envelope" /> <!-- title -->
+      </div>
+      <div className="panel-body">
+        <div className="row">
+          <div className="col-sm-8">
+            <FontAwesome name="user" /> <!-- author -->
+          </div>
+          <div className="col-sm-4">
+            <FontAwesome name="object-group" /> <!-- category -->
+          </div>
+        </div>
+        <div className="row">
+          <div className="col-sm-4">
+            <FontAwesome name="comments-o" /> <!-- comment count --> comment(s)
+          </div>
+          <div className="col-sm-4">
+            <!-- vote score -->
+          </div>
+          <div className="col-sm-4">
+            <FontAwesome name="clock-o" /> <!-- time stamp -->
+          </div>
+        </div>
+      </div>
+      <div className="panel-footer">
+        <a className="btn btn-xs btn-info smallMargin">
+          <FontAwesome name="envelope-open-o" /> View
+        </a>
+        <a className="btn btn-xs btn-primary smallMargin">
+          <span className="glyphicon glyphicon-edit" /> Edit
+        </a>
+        <button className="btn btn-xs btn-warning smallMargin">
+          <span className="glyphicon glyphicon-trash" /> Delete
+        </button>
+      </div>
+    </div>
+
+-------------------------------------------------------------------
+// post-detail
+      <div className="row">
+        <div className="col-sm-12">
+          <div className="row">
+            <div className="col-sm-12">
+              <h4>
+                <FontAwesome name="envelope" /> Post Detail
+              </h4>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-sm-12">
+              <a className="btn btn-sm btn-primary smallMargin">
+                <span className="glyphicon glyphicon-chevron-left" /> Posts
+              </a>
+            </div>
+          </div>
+          <br />
+          <div className="row">
+            <div className="col-sm-12">
+              <div className="panel panel-info">
+                <div className="panel-heading">
+                  <h3 className="panel-title">
+                    <FontAwesome name="envelope" /> <!-- title -->
+                  </h3>
+                </div>
+                <div className="panel-body">
+                  <p>{post.body}</p>
+                </div>
+                <ul className="list-group">
+                  <li className="list-group-item">
+                    <FontAwesome name="user" /> Author: <!-- author -->
+                  </li>
+                  <li className="list-group-item">
+                    <FontAwesome name="object-group" /> Category:{' '}
+                    <!-- category -->
+                  </li>
+                  <li className="list-group-item">
+                    <FontAwesome name="comments-o" /> <!-- comment count -->{' '}
+                    comment(s)
+                  </li>
+                  <li className="list-group-item">
+                    <!-- vote score -->
+                  </li>
+                </ul>
+                <div className="panel-footer">
+                  <a
+                    className="btn btn-primary btn-sm smallMargin"
+                  >
+                    <span className="glyphicon glyphicon-edit" /> Edit
+                  </a>
+                  <button
+                    className="btn btn-warning btn-sm smallMargin"
+                  >
+                    <span className="glyphicon glyphicon-trash" /> Delete
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+----------------------------------------------------------------------------
+// post-form
+      <div className="row">
+        <div className="col-sm-12">
+          <h4>
+            <FontAwesome name="envelope" /> Post Form
+          </h4>
+          <div className="well well-lg">
+            <form>
+              <div className="form-group">
+                <label htmlFor="title">Title</label>
+                <input
+                  required
+                  type="text"
+                  className="form-control"
+                  id="title"
+                  name="title"
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="body">Body</label>
+                <textarea
+                  required
+                  className="form-control"
+                  id="body"
+                  name="body"
+                  cols="30"
+                  rows="4"
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="author">Author</label>
+                <input
+                  required
+                  type="text"
+                  className="form-control"
+                  id="author"
+                  name="author"
+                />
+              </div>
+
+              <div className="form-group">
+                <label htmlFor="category">Category</label>
+                <select
+                  required
+                  className="form-control"
+                  id="category"
+                  name="category"
+                >
+                  <option value="" />
+                    <option value=<!-- category code -->>
+                      <!-- category name -->
+                    </option>
+                </select>
+              </div>
+
+              <button
+                type="submit"
+                className="btn btn-primary btn-sm smallMargin"
+              >
+                <span className="glyphicon glyphicon-ok" /> Save
+              </button>
+              <a className="btn btn-warning btn-sm smallMargin">
+                <span className="glyphicon glyphicon-remove" /> Cancel
+              </a>
+            </form>
+          </div>
+        </div>
+      </div>
+
+----------------------------------------------------------------------------
+// app-alert
+
+import React from 'react';
+
+// ----------------------------------------------------
+// AppAlert component is used to display informational
+// or warning messages in the application.
+// ----------------------------------------------------
+const AppAlert = props => {
+  const { type, message } = props;
+
+  const alertType = type === 'info' ? 'alert-info' : 'alert-danger';
+  const iconType =
+    type === 'info' ? 'glyphicon-info-sign' : 'glyphicon-warning-sign';
+
+  return (
+    <div className={`alert ${alertType}`}>
+      <h5>
+        <span className={`glyphicon ${iconType}`} /> {message}
+      </h5>
+    </div>
+  );
+};
+
+export default AppAlert;
+
+----------------------------------------------------------------------------
+// index.css
+
+body {
+  padding-top: 70px;
+}
+
+.smallMargin {
+  margin: 1px;
+}
+
+.cursorPointer {
+  cursor: pointer;
+}
+
+.alignMiddle {
+  vertical-align: middle;
+  padding-top: 15px;
+}
+
+----------------------------------------------------------------------------
+// posts
+
+const posts = [
+  {
+    id: '1',
+    timestamp: 1468479767290,
+    title: 'Introducing JSX',
+    body:
+      'React embraces the fact that rendering logic is inherently coupled with other UI logic: how events are handled, how the state changes over time, and how the data is prepared for display.',
+    author: 'facebook',
+    category: 'react',
+    voteScore: 4,
+    commentCount: 0
+  },
+  {
+    id: '2',
+    timestamp: 1468479767290,
+    title: 'Redux Principles',
+    body:
+      'Redux can be described in three fundamental principles: (a) Single source of truth (b) State is read-only (c) Changes are made with pure functions',
+    author: 'facebook',
+    category: 'redux',
+    voteScore: 5,
+    commentCount: 0
+  },
+  {
+    id: '3',
+    timestamp: 1468479767290,
+    title: 'Angular',
+    body: 'One framework. Mobile & desktop.',
+    author: 'google',
+    category: 'angular',
+    voteScore: 5,
+    commentCount: 0
+  },
+  {
+    id: '4',
+    timestamp: 1468479767190,
+    title: 'Learn Redux in 10 minutes!',
+    body: 'Just kidding. It takes more than 10 minutes to learn technology.',
+    author: 'thingone',
+    category: 'redux',
+    voteScore: -5,
+    commentCount: 0
+  }
+]
+
+----------------------------------------------------------------------------
+// categories
+
+const categories = [
+    {
+      name: 'React',
+      code: 'react'
+    },
+    {
+      name: 'Redux',
+      code: 'redux'
+    },
+    {
+      name: 'Angular',
+      code: 'angular'
+    },
+    {
+      name: 'ES6',
+      code: 'es6'
+    }
+  ]

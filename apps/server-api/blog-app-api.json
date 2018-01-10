@@ -1,0 +1,65 @@
+{
+  "posts": [
+    {
+      "id": "1",
+      "timestamp": 1468479767290,
+      "title": "Introducing JSX",
+      "body":
+        "React embraces the fact that rendering logic is inherently coupled with other UI logic: how events are handled, how the state changes over time, and how the data is prepared for display.",
+      "author": "facebook",
+      "category": "react",
+      "voteScore": 4,
+      "commentCount": 0
+    },
+    {
+      "id": "2",
+      "timestamp": 1468479767290,
+      "title": "Redux Principles",
+      "body":
+        "Redux can be described in three fundamental principles: (a) Single source of truth (b) State is read-only (c) Changes are made with pure functions",
+      "author": "facebook",
+      "category": "redux",
+      "voteScore": 5,
+      "commentCount": 0
+    },
+    {
+      "id": "3",
+      "timestamp": 1468479767290,
+      "title": "Angular",
+      "body": "One framework. Mobile & desktop.",
+      "author": "google",
+      "category": "angular",
+      "voteScore": 5,
+      "commentCount": 0
+    },
+    {
+      "id": "4",
+      "timestamp": 1468479767190,
+      "title": "Learn Redux in 10 minutes!",
+      "body":
+        "Just kidding. It takes more than 10 minutes to learn technology.",
+      "author": "thingone",
+      "category": "redux",
+      "voteScore": -5,
+      "commentCount": 0
+    }
+  ],
+  "categories": [
+    {
+      "name": "React",
+      "code": "react"
+    },
+    {
+      "name": "Redux",
+      "code": "redux"
+    },
+    {
+      "name": "Angular",
+      "code": "angular"
+    },
+    {
+      "name": "ES6",
+      "code": "es6"
+    }
+  ]
+}
