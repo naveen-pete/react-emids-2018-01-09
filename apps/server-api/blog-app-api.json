@@ -1,13 +1,14 @@
 {
-  "posts": [{
+  "posts": [
+    {
       "id": "1",
       "timestamp": 1468479767290,
       "title": "Introducing JSX",
       "body": "React embraces the fact that rendering logic is inherently coupled with other UI logic: how events are handled, how the state changes over time, and how the data is prepared for display.",
       "author": "facebook",
       "category": "react",
-      "voteScore": 4,
-      "commentCount": 0
+      "voteScore": 2,
+      "commentCount": 5
     },
     {
       "id": "2",
@@ -16,8 +17,8 @@
       "body": "Redux can be described in three fundamental principles: (a) Single source of truth (b) State is read-only (c) Changes are made with pure functions",
       "author": "facebook",
       "category": "redux",
-      "voteScore": 5,
-      "commentCount": 0
+      "voteScore": 4,
+      "commentCount": 10
     },
     {
       "id": "3",
@@ -26,8 +27,8 @@
       "body": "One framework. Mobile & desktop.",
       "author": "google",
       "category": "angular",
-      "voteScore": 5,
-      "commentCount": 0
+      "voteScore": 6,
+      "commentCount": 15
     },
     {
       "id": "4",
@@ -36,11 +37,42 @@
       "body": "Just kidding. It takes more than 10 minutes to learn technology.",
       "author": "thingone",
       "category": "redux",
-      "voteScore": -5,
-      "commentCount": 0
+      "voteScore": 8,
+      "commentCount": 20
+    },
+    {
+      "id": "5",
+      "title": "React is awesome!",
+      "body": "React is fast",
+      "author": "naveen",
+      "category": "react",
+      "commentCount": 2,
+      "voteScore": 1,
+      "timestamp": 1515692644535
+    },
+    {
+      "title": "Jumpstart to Angular",
+      "body": "A quick tutorial on Angular.",
+      "author": "hari",
+      "category": "angular",
+      "commentCount": 2,
+      "voteScore": 1,
+      "timestamp": 1515693010636,
+      "id": "RhQSDrm"
+    },
+    {
+      "title": "Redux is easy!",
+      "body": "Are you kidding?",
+      "author": "shiv",
+      "category": "redux",
+      "commentCount": 2,
+      "voteScore": 1,
+      "timestamp": 1515693283614,
+      "id": "T4mu1iD"
     }
   ],
-  "categories": [{
+  "categories": [
+    {
       "name": "React",
       "code": "react"
     },
