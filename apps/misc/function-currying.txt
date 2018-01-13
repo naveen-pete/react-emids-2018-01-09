@@ -1,0 +1,24 @@
+function greet(start, name) {
+	console.log('greet() => ' + start + '! ' + name);
+}
+
+greet('Hi', 'naveen');
+greet('Hi', 'hari');
+greet('Hello', 'krish');
+greet('Hello', 'shiv');
+
+function newGreet(start) {
+	return function(name) {
+  	console.log('newGreet() => ' + start + '! ' + name);
+  };
+}
+
+const greetHi = newGreet('Hi');
+const greetHello = newGreet('Hello');
+greetHi('naveen');
+greetHi('hari');
+greetHello('krish');
+greetHello('shiv');
+
+newGreet('Namaste')('abc');
+newGreet('Namaskara')('xyz');

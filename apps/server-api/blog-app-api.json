@@ -39,36 +39,6 @@
       "category": "redux",
       "voteScore": 8,
       "commentCount": 20
-    },
-    {
-      "id": "5",
-      "title": "React is awesome!",
-      "body": "React is fast",
-      "author": "naveen",
-      "category": "react",
-      "commentCount": 2,
-      "voteScore": 1,
-      "timestamp": 1515692644535
-    },
-    {
-      "title": "Jumpstart to Angular",
-      "body": "A quick tutorial on Angular.",
-      "author": "hari",
-      "category": "angular",
-      "commentCount": 2,
-      "voteScore": 1,
-      "timestamp": 1515693010636,
-      "id": "RhQSDrm"
-    },
-    {
-      "title": "Redux is easy!",
-      "body": "Are you kidding?",
-      "author": "shiv",
-      "category": "redux",
-      "commentCount": 2,
-      "voteScore": 1,
-      "timestamp": 1515693283614,
-      "id": "T4mu1iD"
     }
   ],
   "categories": [
