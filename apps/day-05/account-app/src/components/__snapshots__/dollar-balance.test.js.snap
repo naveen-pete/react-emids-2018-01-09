@@ -7,14 +7,8 @@ ShallowWrapper {
   Symbol(enzyme.__unrendered__): <DollarBalance
     balance={0}
     conversionRate={0}
-    getConversionRate={
-      [MockFunction] {
-        "calls": Array [
-          Array [],
-        ],
-      }
-    }
-  />,
+    getConversionRate={[Function]}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],

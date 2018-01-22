@@ -20,7 +20,7 @@ ShallowWrapper {
       "children": Array [
         <h2>
           My Bank Account
-        </h2>,
+</h2>,
         <hr />,
         <Connect(Account) />,
         <hr />,
@@ -88,7 +88,7 @@ ShallowWrapper {
         "children": Array [
           <h2>
             My Bank Account
-          </h2>,
+</h2>,
           <hr />,
           <Connect(Account) />,
           <hr />,

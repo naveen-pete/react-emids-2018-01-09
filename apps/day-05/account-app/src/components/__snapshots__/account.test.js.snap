@@ -6,9 +6,9 @@ ShallowWrapper {
   Symbol(enzyme.__root__): [Circular],
   Symbol(enzyme.__unrendered__): <Account
     balance={20}
-    deposit={[MockFunction]}
-    withdraw={[MockFunction]}
-  />,
+    deposit={[Function]}
+    withdraw={[Function]}
+/>,
   Symbol(enzyme.__renderer__): Object {
     "batchedUpdates": [Function],
     "getNode": [Function],
@@ -24,27 +24,27 @@ ShallowWrapper {
       "children": Array [
         <h3
           className="balance"
-        >
+>
           Account Balance (INR): 
           20
-        </h3>,
+</h3>,
         <br />,
         <input
           className="input-amount"
           onChange={[Function]}
-        />,
+/>,
         <button
           className="btn-deposit"
           onClick={[Function]}
-        >
+>
           Deposit
-        </button>,
+</button>,
         <button
           className="btn-withdraw"
           onClick={[Function]}
-        >
+>
           Withdraw
-        </button>,
+</button>,
       ],
     },
     "ref": null,
@@ -126,27 +126,27 @@ ShallowWrapper {
         "children": Array [
           <h3
             className="balance"
-          >
+>
             Account Balance (INR): 
             20
-          </h3>,
+</h3>,
           <br />,
           <input
             className="input-amount"
             onChange={[Function]}
-          />,
+/>,
           <button
             className="btn-deposit"
             onClick={[Function]}
-          >
+>
             Deposit
-          </button>,
+</button>,
           <button
             className="btn-withdraw"
             onClick={[Function]}
-          >
+>
             Withdraw
-          </button>,
+</button>,
         ],
       },
       "ref": null,
